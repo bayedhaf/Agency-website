@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
@@ -43,24 +42,21 @@ const SERVICES = [
     title: "Web Development",
     body: "Performant single-page applications built for speed, accessibility, and complex state management.",
     bullets: ["REACT_NEXT_SYSTEMS", "TAILWIND_ARCHITECTURE", "GRAPHQL_DATA_LAYERS"],
-    image:
-      "linear-gradient(135deg, #10161f 0%, #0b0f16 100%)",
+    image: "/uploads/aman_cop.png",
   },
   {
     tag: "MOBILE_OS",
     title: "Mobile Systems",
     body: "Native-grade cross-platform mobile solutions that provide high-tier user experiences on iOS and Android.",
     bullets: ["NATIVE_BRIDGE_PROTOCOLS", "OFFLINE_FIRST_SYNC", "REALTIME_PUSH_CLUSTER"],
-    image:
-      "linear-gradient(135deg, #12141e 0%, #0b0d14 100%)",
+    image: "linear-gradient(135deg, #12141e 0%, #0b0d14 100%)",
   },
   {
     tag: "CLOUD_INFRA",
     title: "Cloud Infrastructure",
     body: "Automated serverless scaling and robust container orchestration for global enterprise workloads.",
     bullets: ["KUBERNETES_ORCHESTRATION", "TERRAFORM_IAC_MODULAR", "EDGE_COMPUTE_MESH"],
-    image:
-      "linear-gradient(135deg, #1a1130 0%, #0c0a16 100%)",
+    image: "/uploads/gainf.png",
   },
 ];
 
@@ -103,7 +99,6 @@ export default function SolutionsPage() {
             {"{ EXECUTING_CYCLE }"}
           </span>
         </div>
-
         <div className="grid gap-6 sm:grid-cols-3">
           {FLOW.map((step, i) => (
             <Reveal
@@ -131,7 +126,6 @@ export default function SolutionsPage() {
           ))}
         </div>
       </section>
-
       <section className="mx-auto max-w-[1100px] px-6 pb-20">
         <div className="grid gap-6 sm:grid-cols-3">
           {SERVICES.map((s, i) => (
@@ -141,8 +135,14 @@ export default function SolutionsPage() {
               className="lift-on-hover overflow-hidden rounded-[6px] border border-[var(--line)] bg-[var(--panel)]"
             >
               <div
-                className="h-36 border-b border-[var(--line)]"
-                style={{ background: s.image }}
+                className="h-48 w-full border-b border-[var(--line)] bg-no-repeat bg-center bg-contain"
+                style={{
+                  backgroundImage:
+                    s.image.startsWith("linear-gradient")
+                      ? s.image
+                      : `url(${s.image})`,
+                  backgroundColor: "#0f111a", // fallback dark color
+                }}
               />
               <div className="p-6">
                 <span
