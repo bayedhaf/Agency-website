@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type FooterProps = {
@@ -9,9 +10,15 @@ export function Footer({ status }: FooterProps) {
     <footer className="border-t border-[var(--line)]">
       <div className="mx-auto flex max-w-[1100px] flex-col gap-10 px-6 py-12 sm:flex-row sm:flex-wrap sm:justify-between">
         <div>
-          <div className="font-display text-base font-bold tracking-[0.08em] text-[var(--mint)]">
-            GAMTA
-          </div>
+         <div className="font-display text-base font-bold tracking-[0.08em]">
+ <Image
+  src="/uploads/logo-Phot.png"
+  alt="GAMTA TRINITY"
+  width={120}
+  height={40}
+  className="dark:invert"
+/>
+</div>
           <p className="mt-2 max-w-[260px] font-mono text-[11px] leading-relaxed text-[var(--muted)]">
             © {new Date().getFullYear()} GAMTA TRINITY. ALL SYSTEMS OPERATIONAL.
           </p>

@@ -23,7 +23,7 @@ const PROJECTS: {
     title: "NeoLedger Architecture",
     tag: "FIN_TECH",
     tagVariant: "mint",
-    image: "linear-gradient(135deg, #0d2320 0%, #071018 100%)",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop",
     before: { value: "4.2s", label: "Latency Average", icon: "down" },
     after: { value: "0.08s", label: "98% Improvement", icon: "up" },
     beforeLabel: "BEFORE_METRICS",
@@ -36,7 +36,7 @@ const PROJECTS: {
     title: "OmniHealth Sync",
     tag: "HEALTHCARE",
     tagVariant: "violet",
-    image: "linear-gradient(135deg, #1b0f2e 0%, #0a0b16 100%)",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=400&fit=crop",
     before: { value: "89%", label: "System Uptime", icon: "alert" },
     after: { value: "99.99%", label: "Fail-safe Active", icon: "check" },
     beforeLabel: "LEGACY_STABILITY",
@@ -49,7 +49,7 @@ const PROJECTS: {
     title: "Auto-Scale Core",
     tag: "INFRASTRUCTURE",
     tagVariant: "mint",
-    image: "linear-gradient(135deg, #0c1f14 0%, #060c10 100%)",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     before: { value: "$140k", label: "Monthly Infrastructure", icon: "wallet" },
     after: { value: "$32k", label: "77% Cost Reduction", icon: "coin" },
     beforeLabel: "BASELINE_COST",
@@ -145,13 +145,16 @@ export default function TerminalPage() {
               className="lift-on-hover overflow-hidden rounded-[6px] border border-[var(--line)] bg-[var(--panel)]"
             >
               <div
-                className="flex h-56 items-start p-3"
-                style={{ background: p.image }}
+                className="relative h-56 w-full bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${p.image})` }}
               >
-                <div className="flex gap-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#f4917a]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#f6d76b]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--mint)]" />
+                <div className="absolute inset-0 bg-black/20" />
+                <div className="relative flex h-full items-start p-3">
+                  <div className="flex gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#f4917a]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#f6d76b]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[var(--mint)]" />
+                  </div>
                 </div>
               </div>
 

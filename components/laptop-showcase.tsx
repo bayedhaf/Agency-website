@@ -12,7 +12,7 @@ type TeamMember = {
 const TEAM: TeamMember[] = [
   { name: "Bayisa Balcha", image: "/uploads/bbb.jpg" },
   { name: "Aman Abdala", image: "/uploads/aman.jpg" },
-  { name: "Girma Wekayo", image: "/uploads/bb.jpg" },
+  { name: "Girma Wekayo", image: "/uploads/girma.jpg" },
 ];
 
 const KEY_ROWS = [14, 14, 13, 11, 8];

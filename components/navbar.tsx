@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useApp } from "@/components/providers";
+import Image from "next/image";
 
 const NAV_KEYS = [
   { key: "system", href: "/" },
@@ -37,8 +38,15 @@ export function Navbar() {
           href="/"
           className="font-display text-lg font-bold tracking-[0.08em] text-[var(--fg)]"
           onClick={() => setOpen(false)}
-        >
-          GAMTA
+        > <div className="font-display text-base font-bold tracking-[0.08em]">
+         <Image
+          src="/uploads/logo-Phot.png"
+          alt="GAMTA TRINITY"
+          width={80}
+          height={30}
+          className="dark:invert"
+        />
+        </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

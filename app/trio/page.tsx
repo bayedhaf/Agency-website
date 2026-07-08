@@ -25,7 +25,7 @@ const TRIO = [
     file: "system_bridge.py",
     name: "Girma Wekayo",
     role: "SYSTEM ARCHITECT & THE BRIDGE",
-     image: "/uploads/bb.jpg",
+     image: "/uploads/girma_pro.png",
     body: "The glue between architecture and execution. Kaelen orchestrates the flow of data across the entire stack.",
   },
 ];

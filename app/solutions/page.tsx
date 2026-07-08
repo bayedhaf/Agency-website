@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer";
@@ -49,7 +50,7 @@ const SERVICES = [
     title: "Mobile Systems",
     body: "Native-grade cross-platform mobile solutions that provide high-tier user experiences on iOS and Android.",
     bullets: ["NATIVE_BRIDGE_PROTOCOLS", "OFFLINE_FIRST_SYNC", "REALTIME_PUSH_CLUSTER"],
-    image: "linear-gradient(135deg, #12141e 0%, #0b0d14 100%)",
+    image: "/uploads/girmalogo.png",
   },
   {
     tag: "CLOUD_INFRA",
@@ -134,16 +135,15 @@ export default function SolutionsPage() {
               delay={i * 120}
               className="lift-on-hover overflow-hidden rounded-[6px] border border-[var(--line)] bg-[var(--panel)]"
             >
-              <div
-                className="h-48 w-full border-b border-[var(--line)] bg-no-repeat bg-center bg-contain"
-                style={{
-                  backgroundImage:
-                    s.image.startsWith("linear-gradient")
-                      ? s.image
-                      : `url(${s.image})`,
-                  backgroundColor: "#0f111a", // fallback dark color
-                }}
-              />
+              <div className="relative h-56 w-full overflow-hidden border-b border-[var(--line)] bg-[#0f111a]">
+                <Image
+                  src={s.image}
+                  alt={s.title}
+                  fill
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="p-6">
                 <span
                   className={

@@ -17,7 +17,7 @@ export const dictionaries = {
       paragraph:
         "Gamta Trinity represents the convergence of specialized architecture, high-frequency execution, and absolute structural integrity. We don't just build software; we engineer precision.",
       cta1: "Book a Technical Consultation",
-      cta2: "Explore Engine",
+      cta2: "Our Teams",
     },
     footer: {
       tagline: "© 2024 GAMTA TRINITY. ALL SYSTEMS OPERATIONAL.",
@@ -103,7 +103,7 @@ export const dictionaries = {
       paragraph:
         "Gamta Trinity walitti dhufeenya ijaarsa addaa, raawwii ariifataa, fi cimina caasaa guutuu kan calaqqisiisu dha. Nuti software qofa hin ijaarru; sirriitti ijaarra.",
       cta1: "Mari'ii Ogeessaa Qabsiisi",
-      cta2: "Maashinicha Ilaali",
+      cta2: "Gareewwan Keenya",
     },
     footer: {
       tagline: "© 2024 GAMTA TRINITY. SIRNOONNI HUNDI HOJJETAA JIRU.",
